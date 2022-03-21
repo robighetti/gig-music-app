@@ -1,20 +1,35 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Welcome from './src/Components/Welcome';
+import { ThemeProvider } from 'styled-components';
 
-export default function App() {
+import AppLoading from 'expo-app-loading';
+
+import {
+  useFonts,
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_700Bold,
+} from '@expo-google-fonts/poppins';
+
+import defaultTheme from './src/global/styles/themes/defaultTheme';
+
+import { Dashboard } from './src/screens/Dashboard';
+
+const App = () => {
+  const [fontsLoaded] = useFonts({
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
-    <View style={styles.container}>
-      <Welcome title="React native com bare workflow and typescript" />
-    </View>
+    <ThemeProvider theme={defaultTheme}>
+      <Dashboard />
+    </ThemeProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export { App };
