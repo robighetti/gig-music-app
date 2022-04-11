@@ -10,9 +10,10 @@ import {
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins';
 
-import defaultTheme from './src/global/styles/themes/defaultTheme';
+import { AppProvider } from './src/hooks';
+import { Routes } from './src/routes';
 
-import { Dashboard } from './src/screens/Dashboard';
+import defaultTheme from './src/global/styles/themes/defaultTheme';
 
 const App = () => {
   const [fontsLoaded] = useFonts({
@@ -27,7 +28,9 @@ const App = () => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Dashboard />
+      <AppProvider>
+        <Routes />
+      </AppProvider>
     </ThemeProvider>
   );
 };
