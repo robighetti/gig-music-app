@@ -8,12 +8,13 @@ import { AppRoutes } from './app.routes';
 import { Dashboard } from '../screens/Dashboard';
 import { Profile } from '../screens/Profile';
 import { Agenda } from '../screens/Agenda';
+import { Cadastro } from '../screens/Cadastro';
 
 const Routes: React.FC = () => {
   const { user } = useAuth();
   return (
     <NavigationContainer>
-      {user ? <AppRoutes /> : <Profile />}
+      {user ? <AppRoutes /> : <Agenda />}
     </NavigationContainer>
   );
 };

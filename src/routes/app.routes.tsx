@@ -8,6 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Dashboard } from '../screens/Dashboard';
 import { Agenda } from '../screens/Agenda';
 import { Profile } from '../screens/Profile';
+import { Cadastro } from '../screens/Cadastro';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -57,7 +58,16 @@ const AppRoutes: React.FC = () => {
             />
           ),
         }}
-      />
+      /> 
+      <Screen
+      name="Cadastro"
+      component={Cadastro}
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <MaterialIcons name="cadastro" size={size} color={color} />
+        ),
+      }}
+    />
     </Navigator>
   );
 };
