@@ -14,7 +14,7 @@ const Routes: React.FC = () => {
   const { user } = useAuth();
   return (
     <NavigationContainer>
-      {user ? <AppRoutes /> : <Agenda />}
+      {user ? <AppRoutes /> : <LoginRoute />}
     </NavigationContainer>
   );
 };

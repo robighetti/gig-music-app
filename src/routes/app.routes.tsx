@@ -58,16 +58,16 @@ const AppRoutes: React.FC = () => {
             />
           ),
         }}
-      /> 
+      />
       <Screen
-      name="Cadastro"
-      component={Cadastro}
-      options={{
-        tabBarIcon: ({ size, color }) => (
-          <MaterialIcons name="cadastro" size={size} color={color} />
-        ),
-      }}
-    />
+        name="Cadastro"
+        component={Cadastro}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <MaterialIcons name="add-business" size={size} color={color} />
+          ),
+        }}
+      />
     </Navigator>
   );
 };

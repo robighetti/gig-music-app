@@ -7,7 +7,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { Container, DateText, Icon } from './styles';
 
 interface Props {
-  handleSelectedDate: (date: Date) => void;
+  handleSelectedDate: Function;
 }
 
 const DatePicker: React.FC<Props> = ({ handleSelectedDate }) => {

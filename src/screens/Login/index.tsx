@@ -14,12 +14,12 @@ import logo from '../../assets/logo.png';
 import { Container, Image, Title, Form, Fields } from './styles';
 
 interface FormData {
-  username: string;
+  email: string;
   password: string;
 }
 
 const schema = Yup.object().shape({
-  username: Yup.string().required('Usuário é obrigatório'),
+  email: Yup.string().email().required('Email é obrigatório'),
   password: Yup.string().required('Senha é obrigatória'),
 });
 
@@ -37,7 +37,7 @@ const Login: React.FC = () => {
   const handleLogin = async (form: FormData) => {
     try {
       await signIn({
-        username: form.username,
+        email: form.email,
         password: form.password,
       });
     } catch (error: any) {
@@ -53,12 +53,12 @@ const Login: React.FC = () => {
       <Form>
         <Fields>
           <InputForm
-            name="username"
+            name="email"
             control={control}
             placeholder="Código do Usuário"
             autoCapitalize="none"
             autoCorrect={false}
-            icon="user"
+            icon="mail"
             error={errors.username && errors.username.message}
           />
 

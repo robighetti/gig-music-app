@@ -41,14 +41,14 @@ export const User = styled.View`
 `;
 
 export const UserGreeting = styled.Text`
-  color: ${({theme}) => theme.colors.text};
+  color: ${({theme}) => theme.colors.shape};
   font-family: ${({theme}) => theme.fonts.regular};
 
   font-size: ${RFValue(18)}px;
 `;
 
 export const UserName = styled.Text`
-  color: ${({theme}) => theme.colors.text};
+  color: ${({theme}) => theme.colors.shape};
   font-family: ${({theme}) => theme.fonts.bold};
 
   font-size: ${RFValue(18)}px;

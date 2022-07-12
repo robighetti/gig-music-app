@@ -18,7 +18,7 @@ interface User {
 }
 
 interface SignInCredencials {
-  username: string;
+  email: string;
   password: string;
 }
 
@@ -55,10 +55,12 @@ const AuthProvider: React.FC = ({ children }) => {
       usr => usr.email === email && usr.password === password
     );
 
-    if (!userData) {
+    if (userData.length <= 0) {
       console.log(userData);
       throw new Error('User not find');
     }
+
+    console.log(userData);
 
     await AsyncStorage.setItem('@gigMusic:user', JSON.stringify(userData));
 
