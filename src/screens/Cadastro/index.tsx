@@ -11,27 +11,24 @@ const Cadastro: React.FC = () => {
   return (
     <Container>
       <Form>
-        <Title>Cadastro</Title>
+        <Title>Atualização Cadastro</Title>
 
         <Input
           autoCapitalize="words"
           icon="user"
-          placeholder="Nome"
+          placeholder="Nome Banda"
+          returnKeyType="next"
+        />
+
+        <Input
+          icon="direction"
+          placeholder="Estilo Musical"
           returnKeyType="next"
         />
 
         <Input
           icon="direction"
           placeholder="Localizacao de Atuação"
-          returnKeyType="next"
-        />
-
-        <Input
-          keyboardType="email-address"
-          autoCorrect={false}
-          autoCapitalize="none"
-          icon="mail"
-          placeholder="E-mail"
           returnKeyType="next"
         />
 

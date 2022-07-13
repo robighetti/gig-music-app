@@ -30,7 +30,7 @@ const AppRoutes: React.FC = () => {
     >
       <Screen
         name="Home"
-        component={Dashboard}
+        component={Profile}
         options={{
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons name="home" size={size} color={color} />
@@ -48,7 +48,7 @@ const AppRoutes: React.FC = () => {
       />
       <Screen
         name="Profile"
-        component={Profile}
+        component={Dashboard}
         options={{
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons

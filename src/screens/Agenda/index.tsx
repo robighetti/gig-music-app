@@ -5,8 +5,7 @@ import { DatePicker } from '../../components/DatePicker';
 import { Container } from './styles';
 
 const Agenda: React.FC = () => {
-  const handleSelectedDate = useCallback((event: Event) => {
-    console.log(date);
+  const handleSelectedDate = useCallback((event: Event) => {    
   }, []);
   return (
     <Container>

@@ -19,5 +19,12 @@ export default [
     email: 'fulano@gmail.com',
     password: '222222',
     avatar: undefined
-  }
+  },
+  {
+    id: 4,
+    name: 'Hebert Santos',
+    email: 'hebert.santos@gmail.com',
+    password: '333333',
+    avatar: 'https://avatars.githubusercontent.com/u/45999236?v=4'
+  },
 ]
