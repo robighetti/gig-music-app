@@ -21,13 +21,13 @@ const Cadastro: React.FC = () => {
         />
 
         <Input
-          icon="direction"
+          icon="music"
           placeholder="Estilo Musical"
           returnKeyType="next"
         />
 
         <Input
-          icon="direction"
+          icon="search"
           placeholder="Localizacao de Atuação"
           returnKeyType="next"
         />
