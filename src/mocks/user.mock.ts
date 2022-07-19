@@ -27,4 +27,11 @@ export default [
     password: '333333',
     avatar: 'https://avatars.githubusercontent.com/u/45999236?v=4'
   },
+  {
+    id: 5,
+    name: 'Rodrigo Bighetti',
+    email: 'rodrigo@gmail.com',
+    password: '111111',
+    avatar: 'https://avatars.githubusercontent.com/u/45999236?v=4'
+  }
 ]

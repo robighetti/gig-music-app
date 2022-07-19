@@ -1,6 +1,8 @@
 import React, { useCallback } from 'react';
 import { Text } from 'react-native';
+import { date } from 'yup';
 import { DatePicker } from '../../components/DatePicker';
+import { Form, Title } from '../Login/styles';
 
 import { Container } from './styles';
 
@@ -9,7 +11,8 @@ const Agenda: React.FC = () => {
   }, []);
   return (
     <Container>
-      <Text>Agenda</Text>
+      <Title>Agenda</Title>
+      <DatePicker handleSelectedDate={handleSelectedDate}></DatePicker>
       <DatePicker handleSelectedDate={handleSelectedDate}></DatePicker>
     </Container>
   );

@@ -29,6 +29,19 @@ const AppRoutes: React.FC = () => {
       }}
     >
       <Screen
+        name="Profile"
+        component={Dashboard}
+        options={{
+          tabBarIcon: ({ size, color }) => (
+            <MaterialIcons
+              name="supervised-user-circle"
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Screen
         name="Home"
         component={Profile}
         options={{
@@ -45,20 +58,7 @@ const AppRoutes: React.FC = () => {
             <Feather name="calendar" size={size} color={color} />
           ),
         }}
-      />
-      <Screen
-        name="Profile"
-        component={Dashboard}
-        options={{
-          tabBarIcon: ({ size, color }) => (
-            <MaterialIcons
-              name="supervised-user-circle"
-              size={size}
-              color={color}
-            />
-          ),
-        }}
-      />
+      />      
       <Screen
         name="Cadastro"
         component={Cadastro}
