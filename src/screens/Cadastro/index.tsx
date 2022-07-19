@@ -11,7 +11,7 @@ const Cadastro: React.FC = () => {
   return (
     <Container>
       <Form>
-        <Title>Atualização Cadastro</Title>
+        <Title>Atualização Cadastral</Title>
 
         <Input
           autoCapitalize="words"
